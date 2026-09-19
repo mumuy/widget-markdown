@@ -1,0 +1,49 @@
+{
+    "name": "widget-markdown",
+    "version": "1.0.0",
+    "description": "markdown component",
+    "author": "HaoLe Zheng",
+    "license": "MIT",
+    "keywords": [
+        "Markdown"
+    ],
+    "main": "./dist/widget-markdown.min.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mumuy/widget-markdown.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mumuy/widget-markdown/issues"
+    },
+    "engines": {
+        "node": ">=20",
+        "yarn": "please-use-npm",
+        "npm": ">=10"
+    },
+    "files": [
+        "dist"
+    ],
+    "devDependencies": {
+        "@babel/core": "^8.0.1",
+        "@babel/plugin-syntax-import-attributes": "^7.29.7",
+        "@babel/plugin-transform-class-properties": "^8.0.1",
+        "@babel/plugin-transform-private-methods": "^8.0.1",
+        "@babel/plugin-transform-runtime": "^8.0.1",
+        "@babel/preset-env": "^8.0.2",
+        "@babel/runtime": "^8.0.0",
+        "@rollup/plugin-babel": "^7.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "@rollup/plugin-terser": "^1.0.0",
+        "node-fetch": "^3.3.2",
+        "rollup": "^4.63.1",
+        "rollup-plugin-import-css": "^4.2.1"
+    },
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -wc"
+    },
+    "homepage": "https://passer-by.com/widget-markdown/",
+    "directories": {},
+    "dependencies": {
+    }
+}

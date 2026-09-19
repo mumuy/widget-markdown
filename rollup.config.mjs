@@ -1,0 +1,55 @@
+import resolve from '@rollup/plugin-node-resolve';          // 使用node_modules包
+import terser from '@rollup/plugin-terser';                 // 代码压缩
+import babel from '@rollup/plugin-babel';                   // ECMAScript兼容
+import css from "rollup-plugin-import-css";
+import fetchRemoteFile from './fetch-remote-file.mjs';       // 将远程文件转换为本地
+import pkg from './package.json' with { type:'json' };     // 获取package信息
+
+// 版权信息
+const repository = pkg.repository.url.replace(/(.+)(:\/\/.+)\.git$/,'https$2');
+const now = new Date();
+const date = (new Date(now.getTime()-now.getTimezoneOffset()*60000)).toISOString().substring(0,10);
+const banner = `/*!
+ * ${pkg.name} v${pkg.version}
+ * ${pkg.description}
+ * ${pkg.homepage}
+ *
+ * Copyright (c) 2026-present, ${pkg.author}
+ *
+ * Released under the ${pkg.license} License
+ * ${repository}
+ *
+ * Created on: ${date}
+ */`;
+
+// 将远程文件转换成本地模块引用
+const remoteUrl = 'https://passer-by.com/widget-code/dist/widget-code.min.js?v='+Date.now();
+const localPath = 'src/module/package/widget-code.min.js';
+
+const commonPlugins = [
+    resolve(),
+    css(),
+    babel({
+        babelHelpers: 'runtime',
+        exclude:'node_modules/**'
+    }),
+    terser(),
+    fetchRemoteFile(remoteUrl, localPath)
+];
+
+ export default [{
+    input: './src/widget-markdown.js',
+    output:[{
+        file: './dist/widget-markdown.min.js',
+        format: 'umd',
+        banner
+    },{
+        file: './dist/widget-markdown.min.mjs',
+        format: 'es',
+        banner
+    }],
+    plugins: commonPlugins,
+    watch: {
+        exclude: ['node_modules/**', '**/package/**']
+    }
+}];

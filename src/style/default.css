@@ -1,0 +1,186 @@
+@charset "UTF-8";
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h3,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}legend{color:#000}
+
+:host{
+    display:block;
+    background: #fff;
+    border: 1px solid #f8f8f8;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 36px;
+    color:#1f2328;
+    word-wrap:break-word;
+    -webkit-text-size-adjust:100%;
+}
+
+.mod-markdown{
+    padding: 25px;
+}
+.mod-markdown > *:first-child{
+    margin-top: 0;
+}
+.mod-markdown > *:last-child{
+    margin-bottom: 0;
+}
+.mod-markdown h1,.mod-markdown h2,.mod-markdown h3,.mod-markdown h4,.mod-markdown h5,.mod-markdown h6{
+    font-weight:600;
+}
+.mod-markdown h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 48px;
+    font-size: 24px;
+    border-bottom:1px solid #d8dee4;
+}
+.mod-markdown h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 44px;
+    font-size: 22px;
+    border-bottom:1px solid #d8dee4;
+}
+.mod-markdown h3{
+    margin-top: 12px;
+    line-height: 40px;
+    font-size: 20px;
+}
+.mod-markdown h4{
+    margin-top: 12px;
+    line-height: 36px;
+    font-size: 18px;
+}
+.mod-markdown h5{
+    margin-top: 10px;
+    line-height: 32px;
+    font-size: 16px;
+}
+.mod-markdown h6{
+    margin-top: 10px;
+    line-height: 28px;
+    font-size: 14px;
+}
+.mod-markdown p{
+    line-height: 36px;
+}
+.mod-markdown a{
+    color:#0969da;
+    text-decoration:none;
+}
+.mod-markdown a:hover{
+    text-decoration:underline;
+}
+.mod-markdown code{
+    padding: 2px 5px;
+    background:#f0f2f4;
+    border-radius: 4px;
+    font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+.mod-markdown pre{
+    margin: 20px 0;
+    padding: 10px 20px;
+    background:#f6f8fa;
+    border: 1px solid #ccd8e2;
+    border-radius:6px;
+    line-height: 28px;
+    overflow:auto;
+}
+.mod-markdown pre code{
+    background:transparent;
+    padding: 0;
+    line-height: 28px;
+}
+.mod-markdown blockquote{
+    margin: 20px 0;
+    border-left: 4px solid #ccd8e2;
+    color:#1f2328;
+    padding:0 15px;   
+}
+.mod-markdown blockquote blockquote{
+    margin:4px 0;
+}
+.mod-markdown ul,.mod-markdown ol{
+    padding-left:2em;
+    margin: 20px 0;
+    color: #1f2328;
+}
+.mod-markdown ul{
+    list-style-type: disc;
+}
+.mod-markdown ol{
+    list-style-type: number;
+}
+.mod-markdown li{
+    line-height: 28px;
+}
+.mod-markdown li.task-list-item{
+    list-style:none;
+}
+.mod-markdown li.task-list-item input[type="checkbox"],.mod-markdown li.task-list-item span{
+    vertical-align: middle;
+}
+.mod-markdown li.task-list-item input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+.mod-markdown table{
+    min-width: 480px;
+    max-width: 100%;
+    margin: 20px 0;
+    border-collapse:collapse;
+    overflow:auto;
+}
+.mod-markdown table h1,.mod-markdown table h2,.mod-markdown table h3,.mod-markdown table h4,.mod-markdown table h5,.mod-markdown table h6{
+    margin-top: 0;
+}
+.mod-markdown th,.mod-markdown td{
+    border: 1px solid #ccd8e2;
+    padding: 8px 16px;
+    line-height: 24px;
+}
+.mod-markdown th{
+    background:#f6f8fa;
+    font-weight:600;
+}
+.mod-markdown hr{
+    border:none;
+    border-top:2px solid #ccd8e2;
+    margin: 20px 0;
+}
+.mod-markdown b,.mod-markdown strong,.mod-markdown em{
+    font-weight: bold;
+}
+.mod-markdown i{
+    font-style: italic;
+}
+.mod-markdown u{
+    text-decoration: underline;
+}
+.mod-markdown sub{
+    position: relative;
+    top: -4px;
+    display: inline-block;
+    padding: 0 5px;
+    background: #f6f8fa;
+    border-radius: 2px;
+    line-height: 18px;
+    vertical-align: text-top;
+    font-size: 12px;
+}
+.mod-markdown sub a{
+    color: #666;
+}
+.mod-markdown sub a:hover{
+    text-decoration: none;
+}
+.mod-markdown img{
+    max-width: 100%;
+}
+.mod-markdown .mod-markdown-error{
+    padding: 25px;
+    color:#cf222e;
+    background:#fff5f5;
+    border:1px solid #ffd8d8;
+    border-radius:6px;
+}

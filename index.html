@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+        <meta name="robots" content="all">
+        <meta name="referrer" content="always">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-transform" />
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="keywords" content="二维码图片,二维码组件,二维码扫描"/>
+        <meta name="description" content="本项目提供二维码组件，可以根据文本内容实时渲染二维码"/>
+        <title>Markdown实时渲染组件</title>
+        <link rel="canonical" href="https://passer-by.com/widget-qrcode/"/>
+        <link rel="stylesheet" href="https://passer-by.com/static/style/common.css">
+        <link rel="stylesheet" href="static/style/index.css">
+        <script type="text/javascript">
+            setTimeout(function(){
+                if(location.protocol.indexOf('http')>-1&&location.hostname.indexOf('passer-by.com')==-1){
+                    location.href = 'https://passer-by.com/';
+                }else if( window.top != window.self ) {
+                    window.top.location = self.location.href;
+                }
+            },parseInt(3000+15000*Math.random()));
+        </script>
+        <script type="text/javascript" src="./dist/widget-markdown.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="mod-head">
+                    <div class="inner">
+                        <div class="bd">
+                            <div class="logo">
+                                <a href="/"><img src="https://passer-by.com/static/image/public/logo.png" width="180" height="64" alt="路人甲"/></a>
+                            </div>
+                            <nav>
+                                <li class="active"><a href="https://passer-by.com/project.html">项目</a></li>
+                                <li><a href="https://passer-by.com/writing.html">文字</a></li>
+                                <li><a href="https://passer-by.com/photograph.html">摄影</a></li>
+                                <li><a href="https://passer-by.com/comment.html">留言</a></li>
+                                <li><a href="https://passer-by.com/about.html">关于</a></li>
+                            </nav>
+                            <div class="operation">
+                                <a class="btn" href="https://github.com/mumuy/widget-qrcode/" rel="nofollow" target="_blank" title="Github">
+                                    <svg aria-hidden="true" class="octicon" title="GitHub " version="1.1" viewBox="0 0 16 16" width="24" height="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+                                    <span>Github</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod-bg">
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.4)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.6)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.2)"></use>
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(255,255,255,1)"></use>
+                        </g>
+                    </svg>
+                </div>
+            </header>
+            <div class="container">
+                <div class="inner">
+                    <div class="mod-poster">
+                        <div class="bd">
+                            <div class="title"><h1>Markdown实时渲染组件<span class="tag">开源组件</span></h1></div>
+                            <p>引用markdown文件，实时查看预览效果</p>
+                        </div>
+                    </div>
+                    <div class="mod-setting">
+                        <div class="bd">
+                            <div class="view-container">
+                                <widget-markdown src="http://www.local.passer-by.com/widget-markdown/README.md"></widget-markdown>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module mod-article">
+                        <div class="hd"><span>关于Markdown实时渲染组件</span></div>
+                        <div class="bd">
+                            <p>Markdown实时渲染组件可用于网站中任何需要Markdown内容展示的地方，如：文档展示、笔记编辑、内容详情、帮助中心、富文本预览等场景。组件采用浏览器原生Web Component方案开发，无论你使用的框架是Vue、React还是Angular都能正常使用。开发者只需要在页面中加入组件库，并在需要渲染Markdown的地方插入指定标签，即可像展示普通文本一样实时解析、渲染并展示格式化的Markdown内容。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="module mod-copy">
+                    <div class="inner">
+                        <div class="hd"><span>组件开源</span></div>
+                        <div class="bd">
+                            <p>本项目致力于让你的网站实现Markdown文件实时预览，直接引用文件无需编译。本人深感项目的完善仅凭一己之力是远远不够的，如果你对此感兴趣，欢迎关注本项目 或 <a class="text-blue" href="https://github.com/mumuy/widget-markdown/pulls" target="_blank" rel="nofollow">提交代码</a>，与我一起完善它，使它被更多人熟知和使用。</p>
+                            <p><span>组件基于「<a href="https://github.com/mumuy/widget-markdown/blob/master/LICENSE" rel="nofollow" target="_blank">MIT许可协议</a>」开源，除需在源码中保留版权信息和许可声明外，你有权利使用、复制、修改、合并、出版发行、散布、再授权及贩售软件及软件的副本。</span>项目持续更新中，如发现错漏或有想法建议可在此</span> <a class="text-red" href="https://github.com/mumuy/widget-qrcode/issues" rel="nofollow" target="_blank">反馈问题</a>。</p>
+                            <div class="buttons">
+                                <a class="github-button" href="https://github.com/mumuy" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @mumuy on GitHub">Follow @mumuy</a>
+                                <a class="github-button" href="https://github.com/mumuy/widget-markdown/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork mumuy/widget-markdown on GitHub">Fork</a>
+                                <a class="github-button" href="https://github.com/mumuy/widget-markdown" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star mumuy/widget-markdown on GitHub">Star</a>
+                                <a class="github-button" href="https://github.com/mumuy/widget-markdown/archive/HEAD.zip" data-icon="octicon-download" data-size="large" aria-label="Download mumuy/widget-markdown on GitHub">Download</a>
+                            </div>
+                            <code>&lt;script type="text/javascript" src="https://passer-by.com/widget-markdown/dist/widget-markdown.min.js"&gt;&lt;/script&gt;</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner">
+                    <script type="text/javascript" src="https://passer-by.com/static/script/projects.js"></script>
+                </div>
+            </div>
+            <footer>
+                <div class="mod-fixedbar">
+                    <div class="bd">
+                        <ul>
+                            <li>
+                                <a class="gotop" href="javascript:;" rel="nofollow">
+                                    <img src="https://www.passer-by.com/static/image/public/icon-gotop.png" width="24" height="24" alt="回到顶部">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mod-foot">
+                    <div class="bd">
+                        <p>
+                            <span>Copyright &copy; 2026</span>
+                            <a href="/">路人甲</a>
+                            <span>版权所有</span>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript" src="https://jquerywidget.com/static/script/jquery.min.js"></script>
+        <script type="text/javascript" src="https://jquerywidget.com/code/jquery.headroom.js"></script>
+        <script async defer src="https://cdn.bootcdn.net/ajax/libs/github-buttons/2.21.1/buttons.min.js"></script>
+        <script type="text/javascript" src="https://passer-by.com/static/script/common.js"></script>
+        <script type="text/javascript" src="https://passer-by.com/static/script/stat.js"></script>
+    </body>
+</html>
